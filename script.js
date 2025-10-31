@@ -19,7 +19,7 @@
         saveBtn.disabled = true;
 
         try {
-          const response = await fetch('https://твій-бекенд.up.railway.app/getInstagramComments', {
+          const response = await fetch('https://instagram-backend-hsh7.onrender.com', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ username, password, postUrl })
@@ -97,4 +97,5 @@
         XLSX.utils.book_append_sheet(workbook, worksheet, 'Instagram Comments');
         XLSX.writeFile(workbook, `Instagram_Comments_${new Date().toISOString().slice(0,10)}.xlsx`);
       });
+
     });
