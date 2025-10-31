@@ -7,11 +7,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Instagram Comments Viewer</h2>
+  <h2><span class="instagram">Instagram</span> Comments Extractor</h2>
 
-  <p>Встав JSON з коментарями або введи вручну:</p>
-  <textarea id="jsonInput" placeholder='[{"name":"user1","text":"Nice!","date":"2025-10-31"}]'></textarea>
-  <div>
+  <div class="input-area">
+    <input type="text" id="postUrl" placeholder="Вставте посилання на Instagram пост або Reels">
     <button id="loadBtn">Завантажити</button>
     <button id="saveBtn" disabled>Експорт в Excel</button>
   </div>
@@ -29,7 +28,7 @@
     </thead>
     <tbody>
       <tr>
-        <td colspan="4" style="text-align:center;">Немає даних</td>
+        <td colspan="4" class="status">Введіть посилання та натисніть "Завантажити"</td>
       </tr>
     </tbody>
   </table>
@@ -40,3 +39,4 @@
 </body>
 
 </html>
+
