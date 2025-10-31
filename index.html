@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Comments Extractor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2><span class="instagram">Instagram</span> Comments Extractor</h2>
+
+  <div class="input-area">
+    <input type="text" id="instaUsername" placeholder="Instagram логін">
+    <input type="password" id="instaPassword" placeholder="Пароль">
+  </div>
+
+  <div class="input-area">
+    <input type="text" id="postUrl" placeholder="Вставте посилання на Instagram пост або Reels">
+    <button id="loadBtn">Завантажити</button>
+    <button id="saveBtn" disabled>Експорт в Excel</button>
+  </div>
+
+  <div id="errorMsg" class="error"></div>
+
+  <table id="commentsTable">
+    <thead>
+      <tr>
+        <th width="50px">№</th>
+        <th width="150px">Name</th>
+        <th>Comment</th>
+        <th width="120px">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="4" class="status">Введіть дані та натисніть "Завантажити"</td>
+      </tr>
+    </tbody>
+  </table>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

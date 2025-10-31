@@ -1,0 +1,71 @@
+﻿    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      text-align: center;
+    }
+    h2 .instagram {
+      color: #c13584;
+    }
+    .input-area {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    input[type="text"], input[type="password"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #loadBtn {
+      background-color: #c13584;
+      color: white;
+    }
+    #saveBtn {
+      background-color: #2e7d32;
+      color: white;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 20px;
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px #ddd;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    th {
+      background-color: #f2f2f2;
+      text-align: center;
+      font-weight: bold;
+    }
+    td:first-child, td:last-child {
+      text-align: center;
+    }
+    .status {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+    .error {
+      color: #d32f2f;
+      text-align: center;
+      margin: 10px 0;
+    }
