@@ -1,30 +1,26 @@
-﻿      const loadBtn = document.getElementById('loadBtn');
+ const loadBtn = document.getElementById('loadBtn');
     const saveBtn = document.getElementById('saveBtn');
     const errorMsg = document.getElementById('errorMsg');
     const tableBody = document.querySelector('#commentsTable tbody');
     let comments = [];
 
     loadBtn.addEventListener('click', () => {
-      const input = document.getElementById('jsonInput').value.trim();
+      const postUrl = document.getElementById('postUrl').value.trim();
       errorMsg.textContent = '';
-      try {
-        const parsed = JSON.parse(input);
-        if (!Array.isArray(parsed)) throw new Error("JSON має бути масивом");
-
-        comments = parsed.map((c, i) => ({
-          number: i + 1,
-          name: c.name || 'Unknown',
-          text: c.text || '',
-          date: c.date || new Date().toLocaleDateString('uk-UA')
-        }));
-
-        renderTable();
-        saveBtn.disabled = false;
-      } catch (err) {
-        errorMsg.textContent = "Помилка: " + err.message;
-        tableBody.innerHTML = `<tr><td colspan="4" style="text-align:center;">Немає даних</td></tr>`;
-        saveBtn.disabled = true;
+      if (!postUrl || !postUrl.includes('instagram.com')) {
+        errorMsg.textContent = "Введіть коректне посилання на Instagram";
+        return;
       }
+
+      // Симуляція коментарів (тестові дані)
+      comments = [
+        { number: 1, name: 'oleg', text: '🔥 Круто!', date: '2025-10-31' },
+        { number: 2, name: 'anna', text: 'Дуже гарно!', date: '2025-10-30' },
+        { number: 3, name: 'max', text: 'Це топ!', date: '2025-10-29' }
+      ];
+
+      renderTable();
+      saveBtn.disabled = false;
     });
 
     function renderTable() {
