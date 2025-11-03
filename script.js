@@ -19,7 +19,7 @@
 
         try {
           // Бекенд має бути оновлений для прийому лише postUrl
-          const response = await fetch('https://твій-бекенд.up.railway.app/getInstagramComments', {
+          const response = await fetch('https://instagram-backend-hsh7.onrender.com', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ postUrl }) // Відправляємо лише URL
